@@ -3,76 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yash S Harsulkar - Journey Torque</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Yash S Harsulkar - Journey Torque | Software Tester & YouTuber</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Official portfolio of Yash S Harsulkar, known as Journey Torque. A professional Software Tester, passionate YouTuber (Motovlogger), and devoted Musician. Explore my skills, projects, and connect with me.">
+    <meta name="keywords" content="Yash S Harsulkar, Journey Torque, Software Tester, Automation Testing, Python, Selenium, YouTube, Motovlogger, Musician, Portfolio, Personal Website">
+    <meta name="author" content="Yash S Harsulkar">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Yash S Harsulkar - Journey Torque | Software Tester & YouTuber">
+    <meta property="og:description" content="Official portfolio of Yash S Harsulkar, known as Journey Torque. A professional Software Tester, passionate YouTuber (Motovlogger), and devoted Musician.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/index.html"> <!-- Replace with actual URL -->
+    <meta property="og:image" content="https://placehold.co/1200x630/0000FF/FFFFFF?text=YASH+S+HARSULKAR"> <!-- Placeholder image for social sharing -->
+    <meta property="og:image:alt" content="Yash S Harsulkar Journey Torque Portfolio">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         body {
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #f8f9fa;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
         }
-        .section {
-            padding: 60px 0;
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        .hero {
-            background-color: #0d6efd;
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
         }
-        .skills span {
-            display: inline-block;
-            background: #e2e6ea;
-            border-radius: 20px;
-            padding: 10px 20px;
-            margin: 5px;
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
         }
-        footer {
-            background: #343a40;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
         }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
 
-    <section class="hero">
-        <h1>Yash S Harsulkar</h1>
-        <h4>Journey Torque</h4>
-        <p>Youtuber by passion, Software Tester by profession, Musician by heart</p>
-    </section>
-
-    <section class="section" id="skills">
-        <div class="container text-center">
-            <h2>Skills</h2>
-            <div class="skills">
-                <span>Python</span>
-                <span>Selenium</span>
-                <span>Automation Testing</span>
-                <span>Youtube Motovlogger</span>
-                <span>Musician</span>
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-sm py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-700 hover:text-blue-800 transition duration-300">Yash S Harsulkar</a>
+            <div class="space-x-6 hidden md:flex">
+                <a href="#about" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300">About</a>
+                <a href="#skills" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300">Skills</a>
+                <a href="#projects" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300">Projects & Socials</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-white z-40 p-6">
+            <div class="flex justify-end">
+                <button id="close-mobile-menu" class="text-gray-600 focus:outline-none">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <div class="flex flex-col items-center space-y-6 mt-8">
+                <a href="#about" class="text-gray-800 text-lg hover:text-blue-700 font-medium transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a>
+                <a href="#skills" class="text-gray-800 text-lg hover:text-blue-700 font-medium transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Skills</a>
+                <a href="#projects" class="text-gray-800 text-lg hover:text-blue-700 font-medium transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Projects & Socials</a>
+                <a href="#contact" class="text-gray-800 text-lg hover:text-blue-700 font-medium transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
             </div>
         </div>
-    </section>
+    </nav>
 
-    <section class="section bg-light" id="projects">
-        <div class="container text-center">
-            <h2>Projects & Socials</h2>
-            <p><a href="https://www.youtube.com/@JourneyTourqueofficial" target="_blank">YouTube Channel: Journey Torque</a></p>
-            <p><a href="https://instagram.com/journey_torque" target="_blank">Instagram: @journey_torque</a></p>
+    <main role="main">
+        <!-- Hero Section -->
+        <section id="hero" class="relative bg-gradient-to-br from-blue-700 to-purple-800 text-white py-24 md:py-32 overflow-hidden shadow-xl">
+            <!-- Background Blob/Shape - purely decorative -->
+            <div class="absolute inset-0 z-0 opacity-20">
+                <svg viewBox="0 0 1440 320" preserveAspectRatio="none" class="absolute inset-0 w-full h-full">
+                    <defs>
+                        <linearGradient id="gradient-hero-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#8B5CF6" />
+                            <stop offset="100%" stop-color="#EC4899" />
+                        </linearGradient>
+                    </defs>
+                    <path fill="url(#gradient-hero-bg)" fill-opacity="0.2" d="M0,192L48,176C96,160,192,128,288,106.7C384,85,480,75,576,101.3C672,128,768,192,864,186.7C960,181,1056,107,1152,80C1248,53,1344,75,1392,85.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+                </svg>
+            </div>
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <div class="mb-6">
+                    <img src="https://placehold.co/150x150/0000FF/FFFFFF?text=YSH" alt="Yash S Harsulkar Profile Picture" class="rounded-full w-32 h-32 md:w-40 md:h-40 object-cover mx-auto ring-4 ring-white ring-opacity-50 shadow-lg">
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Yash S Harsulkar</h1>
+                <p class="text-xl md:text-2xl font-light mb-8">Journey Torque</p>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10 opacity-90">
+                    A Youtuber by passion, Software Tester by profession, and Musician by heart.
+                    Bridging creativity with precision in every endeavor.
+                </p>
+                <a href="#contact" class="inline-block bg-white text-blue-700 hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition duration-300 transform hover:scale-105">
+                    Get in Touch
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-white">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-10">About Me</h2>
+                <div class="text-lg text-gray-700 leading-relaxed text-center md:text-left">
+                    <p class="mb-6">
+                        Hello! I'm Yash S Harsulkar, the face behind "Journey Torque." My professional journey
+                        has led me into the dynamic world of software testing, where I specialize in ensuring
+                        the quality and reliability of software applications through meticulous testing and
+                        automation.
+                    </p>
+                    <p class="mb-6">
+                        Beyond the world of code and test cases, my heart finds its rhythm in music,
+                        where I explore various genres and instruments. And then there's "Journey Torque" –
+                        my passion project on YouTube where I share my adventures and insights as a motovlogger.
+                        It's where I blend my love for exploration with storytelling, creating content
+                        that aims to inspire and entertain.
+                    </p>
+                    <p>
+                        This portfolio showcases a glimpse into my diverse skill set and passions.
+                        Whether it's ensuring robust software or capturing the thrill of the ride,
+                        I approach every challenge with dedication and creativity.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-10">My Skills</h2>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Selenium</span>
+                    <span class="skill-tag">Automation Testing</span>
+                    <span class="skill-tag">Manual Testing</span>
+                    <span class="skill-tag">Test Case Design</span>
+                    <span class="skill-tag">Bug Reporting</span>
+                    <span class="skill-tag">Performance Testing (Basic)</span>
+                    <span class="skill-tag">SQL (Basic)</span>
+                    <span class="skill-tag">YouTube Content Creation</span>
+                    <span class="skill-tag">Video Editing (Basic)</span>
+                    <span class="skill-tag">Motovlogging</span>
+                    <span class="skill-tag">Music Production (Hobbyist)</span>
+                    <span class="skill-tag">Guitar & Keyboard</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects & Socials Section -->
+        <section id="projects" class="py-16 bg-white">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-10">Projects & Socials</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                    <!-- YouTube Card -->
+                    <div class="bg-gradient-to-br from-red-600 to-red-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fab fa-youtube text-6xl text-white mb-4"></i>
+                        <h3 class="text-3xl font-semibold text-white mb-3">Journey Torque (YouTube)</h3>
+                        <p class="text-white text-opacity-90 mb-6">
+                            My personal motovlogging channel where I share thrilling rides, travel experiences,
+                            and bike reviews. Join the journey!
+                        </p>
+                        <a href="https://www.youtube.com/@JourneyTourqueofficial" target="_blank" rel="noopener noreferrer"
+                           class="inline-block bg-white text-red-700 hover:bg-gray-100 px-6 py-2 rounded-full font-semibold transition duration-300">
+                            Watch Now <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                    <!-- Instagram Card -->
+                    <div class="bg-gradient-to-br from-purple-600 to-pink-600 p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fab fa-instagram text-6xl text-white mb-4"></i>
+                        <h3 class="text-3xl font-semibold text-white mb-3">@journey_torque (Instagram)</h3>
+                        <p class="text-white text-opacity-90 mb-6">
+                            Catch daily updates, behind-the-scenes glimpses, and vibrant snapshots from my adventures.
+                        </p>
+                        <a href="https://instagram.com/journey_torque" target="_blank" rel="noopener noreferrer"
+                           class="inline-block bg-white text-purple-700 hover:bg-gray-100 px-6 py-2 rounded-full font-semibold transition duration-300">
+                            Follow Me <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4 max-w-2xl text-center">
+                <h2 class="text-4xl font-bold text-gray-900 mb-10">Connect With Me</h2>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <p class="text-lg text-gray-700 mb-6">
+                        Feel free to reach out for collaborations, professional inquiries, or just to say hello!
+                        I'm always open to new opportunities and discussions.
+                    </p>
+                    <a href="mailto:yashharsulkar@gmail.com"
+                       class="inline-block bg-blue-600 text-white hover:bg-blue-700 px-8 py-4 rounded-lg text-xl font-semibold shadow-md transition duration-300 transform hover:scale-105">
+                        <i class="fas fa-envelope mr-3"></i> Email Me
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Yash S Harsulkar | Journey Torque. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="https://www.youtube.com/@JourneyTourqueofficial" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
+                    <i class="fab fa-youtube text-2xl"></i>
+                </a>
+                <a href="https://instagram.com/journey_torque" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                 <a href="mailto:yashharsulkar@gmail.com" class="text-gray-400 hover:text-white transition duration-300">
+                    <i class="fas fa-envelope text-2xl"></i>
+                </a>
+            </div>
         </div>
-    </section>
-
-    <section class="section" id="contact">
-        <div class="container text-center">
-            <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:yashharsulkar@gmail.com">yashharsulkar@gmail.com</a></p>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Yash S Harsulkar | Journey Torque</p>
     </footer>
 
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    </script>
+
+    <style>
+        .skill-tag {
+            @apply bg-blue-100 text-blue-800 px-5 py-2 rounded-full text-lg font-medium shadow-sm transition duration-300 hover:bg-blue-200 hover:scale-105;
+        }
+    </style>
 </body>
 </html>
+
